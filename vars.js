@@ -1,0 +1,1 @@
+var sfee=0.5, sfixedfee=0.0005, sreserve=2019.76, sminimum=0.01, servicefee=0.5;

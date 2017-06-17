@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from bitmixer.io/api.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Mar 2015 08:07:32 GMT -->
+<head>
+    <title>BitMixer - FAQ's</title>
+    <meta name="description" content="The bitcoin mixing service FAQs.">
+    <meta name="keywords" content="bitcoin, mixer, mixing, fog, laundry">
+    <meta name="keyphrases" Content="bitcoin mixer, bitcoin mixing service, bitcoin fog, bitcoin laundry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- Styles -->
+    <link rel="icon" href="favicon.gif" type="image/gif" >
+    <link href='fonts.css' rel='stylesheet' type='text/css' />
+    <link href="bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="helpful.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- /Styles -->
+
+  </head>
+  <body>
+    
+    <div class="page">
+
+      <!-- Header -->
+      <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="topcontainer">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.php"><span>Bit</span>mixer.io</a>
+          </div>
+          <div class="navbar-collapse">
+            <ul class="nav navbar-nav fright">
+              <li><a href="why.html">Why should I mix my coins?</a></li>
+              <li><a href="how.html">How does it work?</a></li>
+              <li><a href="fees.html">Fees</a></li>
+              <li class="active"><a href="faqs.html">FAQ</a></li>
+              <li><a href="invest.html">Investing</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- /Header -->
+
+      <!-- Content -->
+      <div class="content inner-page">
+        <div class="container">
+
+          <h1>Developer API</h1>
+	  
+	  
+	  <h3>We offer a simple API for developers</h3>
+	  <p><br>
+	  To initiate new mixing send GET request to <span><strong>https://bitmixer.io/order.php</strong></span> with following parameters:
+	  
+<br><br>
+<span><strong>addr1</strong></span> - first forward address <br>
+<span><strong>pr1</strong></span> - percent distribution for the first address <br>
+<span><strong>time1</strong></span> - time delay for the first address <br>
+...<br>
+...<br>
+<span><strong>bitcode</strong></span> - your bitmixer code<br>
+<span><strong>fee</strong></span> - custom fee (<span id="fee">0.5</span> - <span>3.5000</span>)<br>
+<br><br>
+Example:<br><br>
+
+https://bitmixer.io/order.php?addr1=<span>16HGUokcXuJXn9yiV6uQ4N3umAWteE2cRR</span>&pr1=<span>33</span>&time1=<span>8</span>&addr2=<span>1F1Afwxr2xrs3ZQpf6ifqfNMxJWZt2JupK</span>&pr2=<span>67</span>&time2=<span>16</span>&bitcode=<span>AcOw</span>&fee=<span>0.6523</span>
+<br><br>
+You may use up to 10 forward addresses.
+<br><br>
+Response:<br><br>
+<strong>addr=<span>{generated incoming address}</span>&maxamount=<span>{maxamount}</span>&bitcode=<span>{bitcode}</span></strong>
+<br>
+or error with error description.
+<br><br>
+<span><strong>addr</strong></span> - the new generated address for this mixing. Just send your BTC (during 12 hours only, less than maxamount) and order will be processed automatically.
+<br><br>
+In order to download the Letter of Guarantee you have to accept our server's cookies in previous response and get <strong>https://bitmixer.io/lettertxt.php?addr=<span>{generated address}</span></strong>
+
+</p>	  
+          <p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+        </div>
+      </div>
+      <!-- /Content -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer>        
+      <div class="topcontainer">
+	<ul class="nav navbar-nav">
+	  TOR mirror:<a href=http://client.onion/>client.onion</a>
+	</ul>
+        <ul class="nav navbar-nav fright">
+          Donations:<a href="bitcoin:client">client</a>
+  
+        </ul>
+        <ul class="nav navbar-nav fright">
+          <a href="api.html">API</a>
+  
+        </ul>
+        
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Scripts -->
+    <script src="vars.js"></script>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script language="Javascript">
+      $('#fee').text(sfee);
+    </script>
+    <!-- /Scripts -->
+
+  </body>
+
+<!-- Mirrored from bitmixer.io/api.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Mar 2015 08:07:32 GMT -->
+</html>

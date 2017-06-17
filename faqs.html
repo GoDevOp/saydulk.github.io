@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from bitmixer.io/faqs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Mar 2015 08:07:32 GMT -->
+<head>
+    <title>BitMixer - FAQ's</title>
+    <meta name="description" content="The bitcoin mixing service FAQs.">
+    <meta name="keywords" content="bitcoin, mixer, mixing, fog, laundry">
+    <meta name="keyphrases" Content="bitcoin mixer, bitcoin mixing service, bitcoin fog, bitcoin laundry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- Styles -->
+    <link rel="icon" href="favicon.gif" type="image/gif" >
+    <link href='fonts.css' rel='stylesheet' type='text/css' />
+    <link href="bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="helpful.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- /Styles -->
+
+  </head>
+  <body>
+    
+    <div class="page">
+
+      <!-- Header -->
+      <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="topcontainer">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.php"><span>Bit</span>mixmaster</a>
+          </div>
+          <div class="navbar-collapse">
+            <ul class="nav navbar-nav fright">
+              <li><a href="why.html">Why should I mix my coins?</a></li>
+              <li><a href="how.html">How does it work?</a></li>
+              <li><a href="fees.html">Fees</a></li>
+              <li class="active"><a href="faqs.html">FAQ</a></li>
+              <li><a href="invest.html">Investing</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- /Header -->
+
+      <!-- Content -->
+      <div class="content inner-page">
+        <div class="container">
+
+          <h1>FAQ's</h1>
+	  <p></p>
+	  
+	  <h3>How long does the mixing process take?</h3>
+	  <p>
+	   We have a large Bitcoin reserve in our mixer (currently <span id="reserve"></span> BTC), so you do not need to wait for other users to send coins to be mixed. Your coin mixing will be processed <strong>instantly</strong> as soon as we have received your funds. To prevent advanced time-based analysis of your blockchain transactions, you may set a time delay for every forward address to receive the BTC. We will then send your coins according to the time delays you have specified.</p>
+          
+          <h3>How many confirmations do you need to accept transactions?</h3>
+	  <p>
+	   The number of confirmations required depends on the transaction volume:
+	   <ul>Less than 25 BTC - 1 confirmation;</ul>
+	   <ul>Less than 250 BTC - 3 confirmations;</ul>
+	   <ul>Less than 1000 BTC - 4 confirmations;</ul>
+	   <ul>More than 1000 BTC - 5 confirmations.</ul>
+	   </p>
+          
+          <h3>I have accidently closed the browser window before getting confirmation of my transfer.</h3>
+          <p>
+          Don't worry. You don't need to stay at the page after you got incoming address. All transfers will be automatically processed according to your order (for the next 12 hours).
+          </p>
+          
+          <h3>How long is incoming address valid for?</h3>
+          <p>
+          <strong>The generated address is valid for 12 hours only. We completely delete your order's data after 12 hours. All further payments will be ignored.</strong>
+          </p>
+          
+          <h3>What logs are kept?</h3>
+	  <p>
+	  Absolutely no logs or personally identifying information are kept regarding your use of the Bitmixer service. All logs are permanently removed from both our website database and from our Bitcoin wallet after your coins have been transferred out of our reserve. All forwarding entries are removed after 12 hours.
+          </p>
+	  
+	  <h3>What is the maximum transaction size?</h3>
+	  <p>
+	  The maximum transaction size depends on our current Bitcoin reserves and the number of coins from your previous transactions which are in our reserve. For your privacy, we cannot send you coins you have already sent to our reserve for mixing which may still be present in our Bitcoin reserves. You will be notified of your maximum transaction size during the order process.
+	  </p>
+
+	  <h3>Is there a minimum transaction size?</h3>
+
+	  <p>Please do not send transactions less than <span id="minimum"></span> BTC. Smaller amounts will be considered as donations.</p>
+
+	  <h3>Can I trust you with large amounts of BTC?</h3>
+	  <p>
+	  Our business model relies upon having an outstanding reputation in the Bitcoin community. If you have any doubts, you can mix your coins step by step using small amounts. Our proprietary <strong>Bitmixer code</strong> ensures that your previous coins will never be mixed with new ones.
+	  </p>
+	  
+	  <h3>What is a Bitmixer code?</h3>
+	  <p>
+	  After your first exchange you will receive a special Bitmixer code. This code makes sure that you will never receive any of the previous coins you have added to our reserves in any subsequent transactions you make with Bitmixer. In other words this ensures that you remain untraceable.</p>
+	  
+	   <h3>What is a Letter of Guarantee?</h3>
+	   <p>The Letter of Guarantee is provably proof of our obligations.</p>
+	  <p>
+	  When we send you the Bitcoin address to send your coins to be mixed, we provide a digitally signed confirmation that this address has truly been generated by our server. For your peace of mind we always provide this and sign it from our main bitcoin account 1<span>Bitmixer</span>Eiyyp3eTLaCpgBbhYERs48qza. You may verify our digital sign using your Bitcoin wallet.
+	  </p>
+	  <p>The Letter of Guarantee is the only proof of our obligations. <strong>Please always save the Letter of Guarantee before you send us coins.</strong> We completely delete your order's data in 12 hours from our database, so only the Letter of Guarantee could help to restore your order if something goes wrong with your mixing.
+	  </p>
+	  
+	  <h3>Why should I set custom fee?</h3>
+	  <p>
+	  If attacker knows service fee, he can analyse blockchain to find exact sum transferred and discover your destination account.
+	  </p>
+	  <p>
+	  For example if you send 100 BTC with a fixed fee 0.5% + 0.0005 BTC, you should receive 99.4995 BTC. It is not so difficult to check blockchain after 24 hours and find all exact transactions. Even if you use several forward addresses it is quite easy. That is why we strongly recommend to set custom fee, combined with several forward addresses and time delay.
+	  </p>
+	  
+          <p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+        </div>
+      </div>
+      <!-- /Content -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer>        
+      <div class="topcontainer">
+	<ul class="nav navbar-nav">
+	  TOR mirror:<a href=http://client.onion/>client.onion</a>
+	</ul>
+        <ul class="nav navbar-nav fright">
+          Donations:<a href="bitcoin:client">client</a>
+  
+        </ul>
+        <ul class="nav navbar-nav fright">
+          <a href="api.html">API</a>
+  
+        </ul>
+        
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Scripts -->
+    <script src="vars.js"></script>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script language="Javascript">
+      $('#reserve').text(sreserve);
+      $('#minimum').text(sminimum);
+    </script>
+    <!-- /Scripts -->
+
+  </body>
+
+<!-- Mirrored from bitmixer.io/faqs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Mar 2015 08:07:32 GMT -->
+</html>

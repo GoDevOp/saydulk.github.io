@@ -1,0 +1,1 @@
+BMX.Error=(function(){var a=$("#errorAlert");return{show:function(b){a.find(".error-text").html(b);a.show();setTimeout(function(){a.find(".error-text").html("");a.hide()},5000)}}})();
